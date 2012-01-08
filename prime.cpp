@@ -25,6 +25,12 @@ TEST_F(CTestPrime, TestOne) {
 }
 
 
+TEST_F(CTestPrime, PrimeFactors) {
+  std::list<unsigned int> a = {2};
+
+  ASSERT_EQ(a, primeFactors(2));
+}
+
 int main(int argc, char **argv) {
   ::testing::InitGoogleTest(&argc, argv);
 
