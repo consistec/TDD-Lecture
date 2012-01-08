@@ -1,5 +1,12 @@
 #include <gtest/gtest.h>
 
+class CTestPrime : public ::testing::Test {
+};
+
+TEST_F(CTestPrime, TestOne) {
+}
+
+
 int main(int argc, char **argv) {
   ::testing::InitGoogleTest(&argc, argv);
 
