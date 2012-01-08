@@ -35,6 +35,7 @@ std::list<unsigned int> primeFactors(unsigned int i) {
       if (i % j==0) {
         result.push_back(j);
         result.splice(result.end(), primeFactors(i / j));
+        break;
       }
     }
   }
