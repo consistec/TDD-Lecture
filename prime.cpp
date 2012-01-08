@@ -11,6 +11,7 @@ bool isPrime(unsigned int i) {
 TEST_F(CTestPrime, TestOne) {
   ASSERT_FALSE(isPrime(1));
   ASSERT_TRUE(isPrime(2));
+  ASSERT_FALSE(isPrime(4));
 }
 
 
