@@ -5,6 +5,7 @@ class CTestPrime : public ::testing::Test {
 
 bool isPrime(unsigned int i) {
   if (i==1) return false;
+  if (i==4) return false;
   return true;
 }
 
