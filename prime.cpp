@@ -6,6 +6,12 @@ class CTestPrime : public ::testing::Test {
 };
 
 unsigned int firstPrimeFactor(unsigned int i) {
+  for (int j=2; j<i; j++) {
+    if (i % j==0) {
+      return j;
+    }
+  }
+  return i;
 }
 
 TEST_F(CTestPrime, firstPrimeFactor) {
