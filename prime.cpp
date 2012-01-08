@@ -4,6 +4,7 @@ class CTestPrime : public ::testing::Test {
 };
 
 TEST_F(CTestPrime, TestOne) {
+  ASSERT_FALSE(isPrime(1));
 }
 
 
