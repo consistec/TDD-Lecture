@@ -20,10 +20,7 @@ TEST_F(CTestPrime, firstPrimeFactor) {
 
 bool isPrime(unsigned int i) {
   if (i==1) return false;
-  for (int j=2; j<=sqrt(i); j++) {
-    if (i % j==0) return false;
-  }
-  return true;
+  return (firstPrimeFactor(i) == i);
 }
 
 TEST_F(CTestPrime, TestOne) {
