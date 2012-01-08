@@ -30,6 +30,13 @@ std::list<unsigned int> primeFactors(unsigned int i) {
 
   if (isPrime(i)) {
     result.push_back(i);
+  } else {
+    for (int j=2; j<i; j++) {
+      if (i % j==0) {
+        result.push_back(j);
+        result.splice(result.end(), primeFactors(i / j));
+      }
+    }
   }
 
   return result;
