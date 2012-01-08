@@ -3,6 +3,10 @@
 class CTestPrime : public ::testing::Test {
 };
 
+bool isPrime(unsigned int i) {
+  return false;
+}
+
 TEST_F(CTestPrime, TestOne) {
   ASSERT_FALSE(isPrime(1));
 }
