@@ -1,5 +1,6 @@
 #include <gtest/gtest.h>
 #include <cmath>
+#include <list>
 
 class CTestPrime : public ::testing::Test {
 };
@@ -24,6 +25,11 @@ TEST_F(CTestPrime, TestOne) {
   ASSERT_FALSE(isPrime(1000000003));
 }
 
+std::list<unsigned int> primeFactors(unsigned int i) {
+  std::list<unsigned int> result;
+
+  return result;
+}
 
 TEST_F(CTestPrime, PrimeFactors) {
   std::list<unsigned int> a = {2};
