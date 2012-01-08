@@ -19,6 +19,7 @@ TEST_F(CTestPrime, TestOne) {
   ASSERT_TRUE(isPrime(41));
   ASSERT_TRUE(isPrime(43));
   ASSERT_FALSE(isPrime(49));
+  ASSERT_TRUE(isPrime(1000000007));
 }
 
 
