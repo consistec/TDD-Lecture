@@ -38,9 +38,11 @@ std::list<unsigned int> primeFactors(unsigned int i) {
 TEST_F(CTestPrime, PrimeFactors) {
   std::list<unsigned int> factors2 = {2};
   std::list<unsigned int> factors3 = {3};
+  std::list<unsigned int> factors4 = {2,2};
 
   ASSERT_EQ(factors2, primeFactors(2));
   ASSERT_EQ(factors3, primeFactors(3));
+  ASSERT_EQ(factors4, primeFactors(4));
 }
 
 int main(int argc, char **argv) {
