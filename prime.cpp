@@ -1,11 +1,12 @@
 #include <gtest/gtest.h>
+#include <cmath>
 
 class CTestPrime : public ::testing::Test {
 };
 
 bool isPrime(unsigned int i) {
   if (i==1) return false;
-  for (int j=2; j<i; j++) {
+  for (int j=2; j<=sqrt(i); j++) {
     if (i % j==0) return false;
   }
   return true;
@@ -20,6 +21,7 @@ TEST_F(CTestPrime, TestOne) {
   ASSERT_TRUE(isPrime(43));
   ASSERT_FALSE(isPrime(49));
   ASSERT_TRUE(isPrime(1000000007));
+  ASSERT_FALSE(isPrime(1000000003));
 }
 
 
