@@ -5,6 +5,13 @@
 class CTestPrime : public ::testing::Test {
 };
 
+unsigned int firstPrimeFactor(unsigned int i) {
+}
+
+TEST_F(CTestPrime, firstPrimeFactor) {
+  ASSERT_EQ(2, firstPrimeFactor(2));
+}
+
 bool isPrime(unsigned int i) {
   if (i==1) return false;
   for (int j=2; j<=sqrt(i); j++) {
