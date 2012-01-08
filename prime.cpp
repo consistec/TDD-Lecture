@@ -56,12 +56,14 @@ TEST_F(CTestPrime, PrimeFactors) {
   std::list<unsigned int> factors4 = {2,2};
   std::list<unsigned int> factors12 = {2,2,3};
   std::list<unsigned int> factors400400 = {2,2,2,2,5,5,7,11,13};
- 
+  std::list<unsigned int> factorslarge = {23, 307, 141623};
+
   ASSERT_EQ(factors2, primeFactors(2));
   ASSERT_EQ(factors3, primeFactors(3));
   ASSERT_EQ(factors4, primeFactors(4));
   ASSERT_EQ(factors12, primeFactors(12));
   ASSERT_EQ(factors400400, primeFactors(400400));
+  ASSERT_EQ(factorslarge, primeFactors(1000000003));
 }
 
 int main(int argc, char **argv) {
