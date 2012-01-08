@@ -16,6 +16,8 @@ unsigned int firstPrimeFactor(unsigned int i) {
 
 TEST_F(CTestPrime, firstPrimeFactor) {
   ASSERT_EQ(2, firstPrimeFactor(2));
+  ASSERT_EQ(43, firstPrimeFactor(43));
+  ASSERT_EQ(7, firstPrimeFactor(49));
 }
 
 bool isPrime(unsigned int i) {
