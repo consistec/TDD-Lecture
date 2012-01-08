@@ -38,11 +38,10 @@ TEST_F(CTestPrime, TestOne) {
 std::list<unsigned int> primeFactors(unsigned int i) {
   std::list<unsigned int> result;
 
-  if (isPrime(i)) {
-    result.push_back(i);
-  } else {
-    unsigned int j = firstPrimeFactor(i);
-    result.push_back(j);
+  unsigned int j = firstPrimeFactor(i);
+
+  result.push_back(j);
+  if (i != j) {
     result.splice(result.end(), primeFactors(i / j));
   }
 
