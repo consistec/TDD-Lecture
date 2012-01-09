@@ -9,6 +9,7 @@ set(
 
 ADD_EXECUTABLE(test
   prime.cpp
+  miniexample.cpp
 )
 
 TARGET_LINK_LIBRARIES(test pthread gtest)
